@@ -19,6 +19,16 @@
 				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
+		}, {
+			"path": "pages/home/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		}, {
+			"path": "pages/home/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
 		}
 	],
 	"subPackages": [{
@@ -61,6 +71,13 @@
 			"path": "userInfo",
 			"style": {
 				"navigationBarTitleText": "用户信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "push",
+			"style": {
+				"navigationBarTitleText": "发布",
 				"enablePullDownRefresh": false
 			}
 

@@ -89,7 +89,7 @@
 			</view>
 		</view>
 		<view class="position-fixed d-flex" style="bottom:150rpx ;right: 50rpx; ">
-			<u-icon size="70rpx" name="plus-circle-fill"></u-icon>
+			<u-icon @click="goPush" size="70rpx" name="plus-circle-fill"></u-icon>
 		</view>
 	</view>
 </template>
@@ -208,6 +208,13 @@
 				uni.$u.route('/pages/community/recruitment', {
 					userId: userId
 				})
+			},
+			goPush() {
+				if (this.currIndex == 0) {
+					uni.$u.route('/pages/community/push')
+				} else {
+
+				}
 			}
 		}
 	}
