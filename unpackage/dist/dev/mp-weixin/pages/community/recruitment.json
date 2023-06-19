@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "招聘",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-avatar": "/uni_modules/uview-ui/components/u-avatar/u-avatar",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-line": "/uni_modules/uview-ui/components/u-line/u-line",
+    "u-text": "/uni_modules/uview-ui/components/u-text/u-text"
+  }
+}
