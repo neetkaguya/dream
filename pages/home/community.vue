@@ -213,7 +213,7 @@
 				if (this.currIndex == 0) {
 					uni.$u.route('/pages/community/push')
 				} else {
-
+					uni.$u.route('/pages/community/pushDream')
 				}
 			}
 		}

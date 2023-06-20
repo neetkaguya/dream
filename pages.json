@@ -81,7 +81,16 @@
 				"enablePullDownRefresh": false
 			}
 
-		}]
+		}    ,{
+                    "path" : "pushDream",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "一同追梦",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}, {
 		"root": "pages/message",
 		"pages": []
