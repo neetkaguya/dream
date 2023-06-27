@@ -27,7 +27,8 @@
 		}, {
 			"path": "pages/index/mine",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		}, {
 			"path": "pages/index/dream",
