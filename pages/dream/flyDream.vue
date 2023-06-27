@@ -24,8 +24,8 @@
 			<view @click="changeGift(item.giftId)" class="c-flex p-2  a-center mr-2 mb-2 rounded-2"
 				style="border:1px solid var(--nav-main)" :style="{'background-color':currGift==item.giftId?'var(--nav-main)':'',
 				'color':currGift==item.giftId?'var(--nav-white)':'var(--nav-main)'}" v-for="(item,index) in gift" :key="index">
-				<text>{{item.name}}</text>
-				<text>{{item.price}}元</text>
+				<!-- <text>{{item.name}}</text> -->
+				<text>￥{{item.price}}</text>
 			</view>
 		</view>
 		<view class="c-flex mx-2 mt-5">
@@ -83,12 +83,12 @@
 				},
 				gift: [{
 						giftId: 1,
-						name: '辣条',
+						name: '',
 						price: 1
 					},
 					{
 						giftId: 2,
-						name: '矿泉水',
+						name: '',
 						price: 3
 					},
 					{

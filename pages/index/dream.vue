@@ -1,6 +1,11 @@
 <template>
 	<view :style="skin">
-		<u-swiper :list="bannerList" @change="change" @click="click"></u-swiper>
+		<view class="">
+			<u-subsection mode="button" @change="sectionChange" :list="topList" :current="currIndex"></u-subsection>
+		</view>
+		<view>
+			<u-swiper :list="swiperList" @change="change" @click="click"></u-swiper>
+		</view>
 		<view class="d-flex font-me mt-2 px-2">
 			<text>火热</text>
 			<text class="ml-2">附近</text>
@@ -8,22 +13,22 @@
 			<view class="ml-auto">筛选 </view>
 		</view>
 		<view class="px-2 mt-2">
-			<view class="mb-2 c-flex bg-white rounded-2 p-2 " v-for="(item,index) in list" :key="index"
+			<view class="mb-2 c-flex bg-white rounded-2 p-2 border" v-for="(item,index) in list" :key="index"
 				@click="goDreamInfo(item.dreamId)">
 				<view class="font-lg font-weight">{{item.title}}</view>
 				<view class="d-flex font-me">
-					<text>{{item.type}}</text>
-					<text class="ml-2">{{item.group}}</text>
 
-				</view>
-				<view class="d-flex mt-1 a-center">
 					<view class="d-flex">
 						<u-tag class="mr-1" v-for="(value,key) in item.tags" :key="key" :text="value"
 							shape="circle"></u-tag>
 					</view>
+				</view>
+				<view class="d-flex mt-1 a-center">
+					<text>{{item.type}}</text>
+					<text class="ml-2">{{item.group}}</text>
 					<view class="ml-auto font-me">
-						<text>助力进度</text>
-						<text>{{item.currProgress}}/{{item.totalProgress}}</text>
+
+						<text>{{item.currProgress}}人充电</text>
 					</view>
 				</view>
 			</view>
@@ -35,7 +40,9 @@
 	export default {
 		data() {
 			return {
-				bannerList: [
+				currIndex: 0,
+				topList: ['梦想', '人脉'],
+				swiperList: [
 					'https://cdn.uviewui.com/uview/swiper/swiper1.png',
 					'https://cdn.uviewui.com/uview/swiper/swiper2.png',
 					'https://cdn.uviewui.com/uview/swiper/swiper3.png',
@@ -83,13 +90,14 @@
 				uni.$u.route('/pages/dream/dreamInfo', {
 					dreamId: dreamId
 				})
+			},
+			sectionChange(index) {
+				this.currIndex = index;
 			}
 		}
 	}
 </script>
 
 <style>
-	page {
-		background-color: #eeeeee;
-	}
+
 </style>

@@ -27,8 +27,8 @@
 			<u-parse :content="content"></u-parse>
 		</view>
 		<view class="d-flex mx-2 mt-2">
-			<u-button class="" type="primary" text="联系他"></u-button>
-			<u-button @click="goFlyDream" class="" type="error" text="我投了!"></u-button>
+			<u-button class="" type="primary" text="聊一下"></u-button>
+			<u-button @click="goFlyDream" class="" type="error" text="充电"></u-button>
 		</view>
 	</view>
 </template>
@@ -49,7 +49,7 @@
 					type: '个体商户',
 					isFollow: false,
 				},
-				list: ['介绍', '动态'],
+				list: ['介绍', '评论'],
 				currIndex: 0,
 				content: `<p>This is a paragraph of text.</p>
 <p>This is another paragraph of text.</p>
