@@ -1,6 +1,15 @@
 <template>
 	<view :style="skin">
+		<view class="">
+			<u-subsection mode="button" @change="sectionChange" :list="topList" :current="currIndex"></u-subsection>
+		</view>
 		<view class="c-flex mt-2">
+			<view class="border rounded-2 p-3 mx-2 mb-2 d-flex a-center">
+				<u-icon name="volume" size="30"></u-icon>
+				<view class="c-flex ml-3">
+					<text class="text-grey">系统消息</text>
+				</view>
+			</view>
 			<view class="border rounded-2 mx-2 mb-2 d-flex p-3 a-center" v-for="(item,index) in messageList"
 				:key="index">
 				<u-avatar :src="getBackSrc(item.avatar)"></u-avatar>
@@ -23,6 +32,8 @@
 	export default {
 		data() {
 			return {
+				currIndex: 0,
+				topList: ['聊天', '圈子'],
 				messageList: [{
 					messageId: 1,
 					avatar: '',
@@ -45,7 +56,14 @@
 			}
 		},
 		methods: {
+			sectionChange(index) {
+				if (index == 1) {
+					uni.$u.toast('暂未开放')
+				} else {
+					this.currIndex = index;
+				}
 
+			}
 		}
 	}
 </script>

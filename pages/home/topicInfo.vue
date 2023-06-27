@@ -68,6 +68,9 @@
 				</view>
 			</view>
 		</view>
+		<view class="" style="height: 100rpx;">
+			
+		</view>
 		<view class="position-fixed border shadow-lg w-100 bg-white d-flex" style="height: 70rpx;bottom: 0rpx;">
 			<view class="" style="width: 80%;">
 				<u-input placeholder="请输入内容" :custom-style="inputStyle" v-model="inputContent"></u-input>
