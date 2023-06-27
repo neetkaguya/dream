@@ -17,5 +17,7 @@
 	// @import "common/demo.scss";
 	@import "common/css/zcm-main.css";
 	@import "common/css/animation.css";
-	
+	.u-line-progress__line {
+		white-space: nowrap
+	}
 </style>

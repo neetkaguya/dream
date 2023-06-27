@@ -27,7 +27,8 @@
 		}, {
 			"path": "pages/home/mine",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		}
 	],
@@ -115,18 +116,18 @@
 		"color": "#504f54",
 		"borderStyle": "white",
 		"backgroundColor": "#ffffff",
-		"list": [{
-				"text": "梦想",
-				"pagePath": "pages/home/index",
-				"iconPath": "/static/icon/dream.png",
-				"selectedIconPath": "/static/icon/dream.png"
-			},
+		"list": [
 			{
 				"text": "社区",
 				"pagePath": "pages/home/community",
 				"iconPath": "/static/icon/community.png",
 				"selectedIconPath": "/static/icon/community.png"
 			}, {
+				"text": "梦想",
+				"pagePath": "pages/home/index",
+				"iconPath": "/static/icon/dream.png",
+				"selectedIconPath": "/static/icon/dream.png"
+			},{
 				"text": "消息",
 				"pagePath": "pages/home/message",
 				"iconPath": "/static/icon/message.png",
