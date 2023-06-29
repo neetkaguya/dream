@@ -102,7 +102,69 @@
 		"pages": []
 	}, {
 		"root": "pages/mine",
-		"pages": []
+		"pages": [{
+			"path": "myInfo",
+			"style": {
+				"navigationBarTitleText": "我的信息",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "editInfo",
+			"style": {
+				"navigationBarTitleText": "编辑资料",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "wallet",
+			"style": {
+				"navigationBarTitleText": "钱包",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "myCharge",
+			"style": {
+				"navigationBarTitleText": "我的充电",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "myDream",
+			"style": {
+				"navigationBarTitleText": "实现梦想",
+				"enablePullDownRefresh": false
+			}
+
+		}    ,{
+                    "path" : "kefu",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "客服",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "donate",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "赞助",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "dreamCenter",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "梦想中心",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
 	}, {
 		"root": "pages/home",
 		"pages": [

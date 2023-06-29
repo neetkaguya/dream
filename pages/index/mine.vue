@@ -2,7 +2,7 @@
 	<view :style="skin">
 		<view class="px-2 mt-2">
 			<view class="mb-2 bg-white rounded-2 p-2">
-				<view class="d-flex font-me ">
+				<view class="d-flex font-me " @click="goMyInfo">
 					<u-avatar :src="data.src" size="60"></u-avatar>
 					<view class="ml-3 c-flex">
 						<view class="ml-3 d-flex flex-nowrap mb-2 a-center">
@@ -24,7 +24,7 @@
 				</view>
 			</view>
 
-			<view class="mb-2 bg-white rounded-2 p-2">
+			<view class="mb-2 bg-white rounded-2 p-2" @click="goWallet">
 				<view class="c-flex font-me font-weight">
 					<view class=" d-flex a-center">
 						<text class="font-md">钱包</text>
@@ -37,18 +37,18 @@
 			</view>
 
 			<view class="mb-2 d-flex flex-wrap bg-white rounded-2 p-2 j-sb ">
-				<view class="text-center">
+				<view class="text-center" @click="goDreamCenter">
 					<u--image :showLoading="true" :src="icon.dreamPlan" class="ml-1" width="100rpx"
 						height="100rpx"></u--image>
-					<text class="font-mini font-weight text-center">梦想计划</text>
+					<text class="font-mini font-weight text-center">梦想中心</text>
 				</view>
 			</view>
 
-			<view class="mb-2 bg-white rounded-2 p-2">
+			<view class="mb-2 bg-white rounded-2 p-2" @click="goKefu">
 				<text class=" font-md font-weight">联系客服</text>
 			</view>
 
-			<view class="mb-2 bg-white rounded-2 p-2">
+			<view class="mb-2 bg-white rounded-2 p-2" @click="goDonate">
 				<text class=" font-md font-weight">赞助我们</text>
 			</view>
 		</view>
@@ -76,6 +76,21 @@
 		methods: {
 			toggleShow() {
 				this.data.moneyShow = !this.data.moneyShow
+			},
+			goMyInfo() {
+				uni.$u.route('/pages/mine/myInfo')
+			},
+			goWallet() {
+				uni.$u.route('/pages/mine/wallet')
+			},
+			goDreamCenter() {
+				uni.$u.route('/pages/mine/dreamCenter')
+			},
+			goKefu() {
+				uni.$u.route('/pages/mine/kefu')
+			},
+			goDonate() {
+				uni.$u.route('/pages/mine/donate')
 			}
 		}
 	}

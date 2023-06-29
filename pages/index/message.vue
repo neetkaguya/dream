@@ -5,7 +5,7 @@
 		</view>
 		<view class="c-flex mt-2">
 			<view class="border rounded-2 p-3 mx-2 mb-2 d-flex a-center">
-				<u-icon name="volume" size="30"></u-icon>
+				<u-icon name="bell" size="30"></u-icon>
 				<view class="c-flex ml-3">
 					<text class="text-grey">系统消息</text>
 				</view>
