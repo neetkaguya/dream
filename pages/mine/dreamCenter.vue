@@ -41,6 +41,8 @@
 				console.log(index)
 				if (index == 0) {
 					uni.$u.route('/pages/mine/myDream')
+				} else if (index == 1) {
+					uni.$u.route('/pages/mine/myProject')
 				}
 			}
 		}
