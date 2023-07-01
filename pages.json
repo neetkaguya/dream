@@ -164,6 +164,15 @@
                 }
                 
                 }
+                ,{
+                    "path" : "paySuccess",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "支付成功",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
             ]
 	}, {
 		"root": "pages/home",
