@@ -137,52 +137,42 @@
 				"enablePullDownRefresh": false
 			}
 
-		}    ,{
-                    "path" : "kefu",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "客服",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "donate",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "赞助",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "dreamCenter",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "梦想中心",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "paySuccess",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "支付成功",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "myProject",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "我的项目",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+		}, {
+			"path": "kefu",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "donate",
+			"style": {
+				"navigationBarTitleText": "赞助",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "dreamCenter",
+			"style": {
+				"navigationBarTitleText": "梦想中心",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "paySuccess",
+			"style": {
+				"navigationBarTitleText": "支付成功",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "myProject",
+			"style": {
+				"navigationBarTitleText": "我的项目",
+				"enablePullDownRefresh": false
+			}
+
+		}]
 	}, {
 		"root": "pages/home",
 		"pages": [
