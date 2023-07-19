@@ -1,12 +1,12 @@
 <template>
 	<view :style="skin">
 		<view class="mx-2 mt-2">
-			<view class="border rounded-2 d-flex a-center p-3 shadow" @click="goUserInfo">
+			<view class="  d-flex a-center p-3 " @click="goUserInfo">
 				<u-avatar :src="getBackSrc(topicInfo.avatar)"></u-avatar>
 				<view class="d-flex">
 					<view class="c-flex ml-3">
 						<text> {{topicInfo.name}}</text>
-						<text class="font-mt text-grey"> {{topicInfo.type}}</text>
+						<text class="font-mt text-grey"> {{ topicInfo.updateTime | timeFormat}}</text>
 					</view>
 
 				</view>
@@ -15,17 +15,22 @@
 				</view>
 			</view>
 		</view>
+		<view>
+			<u-line></u-line>
+		</view>
 		<view class="mx-2 mt-2 c-flex">
-			<view class=" c-flex mb-4 border p-3 rounded-2 shadow">
+			<view class=" c-flex mb-4  p-3 rounded-2 ">
+				<view class="d-flex py-1">
+					<u-tag icon="#" shape="circle" :plain="true" :text="topicInfo.tag"></u-tag>
+				</view>
 				<u--text margin="0 0 8px 0" :text="topicInfo.content"></u--text>
 				<u-album :multipleSize="90" :urls="topicInfo.albumList"></u-album>
-				<view class="d-flex my-3">
-					<view>
-						<u-tag icon="attach" shape="circle" :plain="true" :text="topicInfo.tag"></u-tag>
+				<view class="d-flex text-grey mt-1">
+					<view class="mr-1">
+						<u-text text="ip属地"></u-text>
 					</view>
-					<view class=" d-flex ml-auto mr-4 ">
-						<u-icon color="var(--nav-lightGrey)" name="heart" size="30"></u-icon>
-						<u-text color="var(--nav-lightGrey)" :text="topicInfo.likeCount"></u-text>
+					<view>
+						<u-text :text="topicInfo.place"></u-text>
 					</view>
 				</view>
 
@@ -33,16 +38,20 @@
 			</view>
 		</view>
 		<view class=" d-flex px-4">
-			<view>
-				<u-text :block="true" :text="topicInfo.commentCount"></u-text>
-
+			<view class="d-flex">
+				<view>
+					<u-text :block="true" :text="topicInfo.commentCount"></u-text>
+				</view>
+				<view>
+					<u-text :block="true" text="条评价"></u-text>
+				</view>
 			</view>
-			<view>
-				<u-text :block="true" text="条评价"></u-text>
+			<view class="ml-auto">
+				<u-text :block="true" text="热门"></u-text>
 			</view>
 		</view>
 		<view class="c-flex mx-2 mt-2">
-			<view class="border shadow rounded-2 c-flex p-2 mb-2" v-for="(item,index) in topicInfo.comment"
+			<view class=" border-bottom c-flex p-2 mb-2" v-for="(item,index) in topicInfo.comment"
 				:key="index">
 				<view class="d-flex a-center">
 					<view class="d-flex a-center">
@@ -69,7 +78,7 @@
 			</view>
 		</view>
 		<view class="" style="height: 100rpx;">
-			
+
 		</view>
 		<view class="position-fixed border shadow-lg w-100 bg-white d-flex" style="height: 70rpx;bottom: 0rpx;">
 			<view class="" style="width: 80%;">
@@ -103,6 +112,7 @@
 					likeList: ['小狸子', '中狸子'],
 					likeCount: 199,
 					commentCount: 200,
+					place: '火星',
 					comment: [{
 							name: '小狸子',
 							content: '噢噢噢噢噢噢噢噢！',

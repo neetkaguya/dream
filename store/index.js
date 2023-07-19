@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import skinConfig from '../common/skinConfig.js'
+import apiConfig from '../common/config.js'
 
 Vue.use(Vuex) // vue的插件机制
 
@@ -32,6 +33,8 @@ const saveLifeData = function(key, value) {
 const store = new Vuex.Store({
 	state: {
 		skin: skinConfig.skinConfig,
+		resUrl: apiConfig.resUrl,
+		workId: lifeData.workId ?? 1,
 	},
 	mutations: {
 		$uStore(state, payload) {

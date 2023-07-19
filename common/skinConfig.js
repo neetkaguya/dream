@@ -1,7 +1,7 @@
 
 let skinConfig =
 	`
-			--nav-main:#5d72df;
+			--nav-main:#2979ff;
 			--nav-sub:#eb3333;
 			--nav-main-light:#dcf3f9;
 			--nav-white:#ffffff;
